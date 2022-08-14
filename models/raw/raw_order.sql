@@ -5,4 +5,4 @@
 }}
 
 SELECT *
-FROM CUSTOMERS.STITCHDBT.ORDERS_TABLE
+FROM {{ source('stitchdbt', 'orders_table') }}
