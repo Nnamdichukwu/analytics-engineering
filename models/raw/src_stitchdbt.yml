@@ -1,10 +1,10 @@
 version: 2
 
 sources:
-- name: mytables
+- name:  stitchdbt
   database: customers
   schema: stitchdbt
-tables:
- - name: customers_table
- - name: orders_table
- - name: product_table
+  tables:
+    - name: customers_table
+    - name: orders_table
+    - name: product_table
