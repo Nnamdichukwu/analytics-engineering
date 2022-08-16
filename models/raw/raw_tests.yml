@@ -7,6 +7,10 @@ models:
        tests:
          -  unique
          -  not_null
+     - name: segment
+       tests:
+          - accepted_values:
+               values: ['Consumer', 'Home Office', 'Corporate']
 
  - name: raw_order
    columns:
@@ -14,10 +18,15 @@ models:
        tests:
         - unique
         - not_null
-
      - name: shipmode
        tests:
         - accepted_values:
             values: ['First Class','Second Class','Same Day','Standard Class']
+ -  name: raw_product
+    columns: 
+      - name: productId
+        tests:
+          - unique
+          - not_null  
         
  

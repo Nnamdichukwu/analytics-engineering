@@ -13,6 +13,11 @@ sources:
           tests:
             - unique
             - not_null
+        - name: segment
+          description: this is the different customer segments
+          tests:
+            - accepted_values:
+                values: ['Consumer', 'Home Office', 'Corporate']
     - name: orders_table
       description: contains all orders on the platform
       columns:
@@ -29,6 +34,5 @@ sources:
           tests:
             - unique
             - not_null  
-            - accepted_values:
-                values: ['Consumer', 'Home Office', 'Corportate']
+       
 
