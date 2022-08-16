@@ -6,11 +6,29 @@ sources:
   schema: stitchdbt
   tables:
     - name: customers_table
+      description: contains all customer details
+      columns:
+        - name: customerID
+          description: this is the primary key. There is only one unique customerID per customer
+          tests:
+            - unique
+            - not_null
     - name: orders_table
+      description: contains all orders on the platform
       columns:
         - name: orderID
+          description: this is the primary key. Each order has a unique orderID
           tests:
              - unique
              - not_null
     - name: product_table
+      description: contains all the product info
+      columns:
+        - name: productID
+          description: this is the primary key
+          tests:
+            - unique
+            - not_null  
+            - accepted_values:
+                values: ['Consumer', 'Home Office', 'Corportate']
 

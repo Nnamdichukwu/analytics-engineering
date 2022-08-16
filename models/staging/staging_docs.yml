@@ -1,0 +1,10 @@
+version: 2
+
+models:
+    - name: stg_orders
+      description: contains product and customer details. There is also one unique orderid per row
+      columns:
+        - name: orderId
+          description: this is the primary key
+        - name: profit
+          description: this is subtraction of ordercostprice from ordersellingprice__it 
