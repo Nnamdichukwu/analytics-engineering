@@ -13,8 +13,8 @@ p.category,
 p.subcategory, 
 shipdate,
 shipmode,
-ordersellingprice__it - ordercostprice as profit
-
+{{ profit('ordersellingprice__it', 'ordercostprice') }} as profit,
+{{ markup('ordersellingprice__it', 'ordercostprice')}} as markup
 
 from {{ ref('raw_order') }} as ro
 left join {{ ref('raw_customer') }} as rc ON ro.customerid = rc.customerid
