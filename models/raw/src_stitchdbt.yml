@@ -2,6 +2,7 @@ version: 2
 
 sources:
 - name:  stitchdbt
+  description: This is a connector for the snowflake warehouse
   database: customers
   schema: stitchdbt
   tables:
